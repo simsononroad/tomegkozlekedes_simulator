@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Public Transport Manager</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+  <div class="brand">PTM</div>
+  <div class="lvl"><b id="lv">1</b><div><span id="title"></span><div class="bar"><i id="xpbar"></i></div></div></div>
+  <div class="stat"><small>Pénz</small><b id="money"></b></div>
+  <div class="stat"><small>Árfolyam</small><b id="rate"></b></div>
+  <div class="stat"><small>Idő</small><b id="clock"></b></div>
+  <div class="speed" id="speed"></div>
+</header>
+<main>
+  <div id="map"></div>
+  <aside>
+    <nav id="tabs"></nav>
+    <section id="panel"></section>
+  </aside>
+</main>
+<div id="toast"></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html>
